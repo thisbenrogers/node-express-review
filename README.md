@@ -678,7 +678,7 @@ function validateUser(user) {
 
 - [ ] Checkout a new branch named `feat/auth` and push it to remote.
 
-Now we're going to prepare some middleware to check for and verify a JSON web token.
+Now we're going to prepare a function to check for and verify a JSON web token.
 
 - [ ] In the root directory, add another directory named `auth`
 	- [ ] Add `restricion.js` to your new `auth` directory.
