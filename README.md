@@ -100,7 +100,7 @@ In your terminal:
 - [ ] `git commit -m "Updates package.json"`
 - [ ] `git push`
 
-> **NOTE:** You may notice that the `-m` message in each of my commits so far is taken from the header of that section. Throughout this review, continue to follow the commit format laid out above, and if you need to see which files to `add` use `git status`. Following this commit flow will yield a really nice commit history that can also serve as a checklist on future reps through this development process. GIT HYGIENE IS SO IMPORTANT TO _GOOD_ EMPLOYERS!!!!
+> **NOTE:** You may notice that the `-m` message in each of these commits so far is taken from the header of that section. Throughout this review, continue to follow the commit format laid out above, and if you need to see which files to `add` use `git status`. Following this commit flow will yield a really nice commit history that can also serve as a checklist on future reps through this development process. GIT HYGIENE IS SO IMPORTANT TO _GOOD_ EMPLOYERS!!!!
 
 
 <br />
