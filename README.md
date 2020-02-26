@@ -92,6 +92,8 @@ _package.json_
 ```
 <br />
 
+The `start` script here is used by Heroku. The value we give it tells Heroku to run `node index.js` to start our server.
+
 In your terminal:
 
 - [ ] `git add package.json`
