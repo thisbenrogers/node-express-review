@@ -86,8 +86,8 @@ _package.json_
 
 ```json
 "scripts": {
-	"server": "nodemon",  //defaults to index.js
-	"start": "node index.js" (for deployments)
+	"server": "nodemon",  
+	"start": "node index.js" 
 }
 ```
 <br />
