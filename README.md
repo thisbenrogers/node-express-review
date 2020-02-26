@@ -810,7 +810,7 @@ router.post('/', (req, res) => {
 module.exports = router;
 ```
 
-- [ ] And a route for registering, using the same getJWT function.
+- [ ] And a route for registering, using the same `getJWT()` function.
 
 _auth/register-router.js_
 
@@ -892,7 +892,7 @@ module.exports = server;
 
 ## Updates documentation
 
-- [ ] On a new branch, make sure that each of your `/api/...` endpoints are dcumented well, including any body data they require, filtering they may offer, validation included, and what data each endpoint returns. Document this clearly and conscisely, so that it is very easy to browse. 
+- [ ] On a new branch, make sure that each of your `/api/...` endpoints are documented well, including any body data they require, filtering they may offer, validation included, and what data each endpoint returns. Document this clearly and concisely, so that it is very easy to browse. 
 
 - [ ] Commit and push these changes
 
@@ -908,12 +908,12 @@ Once the Postgres DB is added, you'll be able to navigate to `Settings` in your 
 - [ ] Add a `DB_ENV` key with a value of `production`
 - [ ] Add a `JWT_SECRET` key with a secure value of your choosing.
 
-- [ ] Now, merge your most recent changes into `master`, and check your Heroku Activity Feed for progress/errors
-- [ ] Once the application is deployed, we'll need to run our migrations. There are a few ways to do this, but for simplicity's sake here we'll use Heroku's Consle that they provide under the `More` dropdown in the top right of your application dashboard. Choose `Run Console`
-- [ ] run `knex migrate:latest`
-- [ ] Using Postman or Insomnia, register a new user
-- [ ] Using Postman or Insomnia, try to access `/api/users` with the token that is returned from `register`
-- [ ] Once this staging application is running well, go into your `production` application and:
+- [ ] Now, merge your most recent changes into `master`, and check your Heroku Activity feed for progress/errors
+- [ ] Once the application is deployed, we'll need to run our migrations. There are a few ways to do this, but for simplicity's sake here we'll use Heroku's Console that they provide under the `More` dropdown in the top right of your application dashboard. Choose `Run Console`
+- [ ] run `knex migrate:latest`, and once the batch has run,
+- [ ] Using Postman or Insomnia, register a new user at the URL of your deployed app (`/api/register`)
+- [ ] Using Postman or Insomnia, try to access `/api/users` with the token that is returned from `register` asn an `authorization` header
+- [ ] Once this staging application is running as expected, go into your `production` application and:
 	- [ ] Provision a Postgres DB
 	- [ ] Add `DB_ENV` and `JWT_SECRET` Config Vars
 	- [ ] Manually deploy from `master`
