@@ -196,7 +196,7 @@ in your terminal:
 
 - [ ] `npm run test`
 
-- [ ] Now commit this work.
+- [ ] Now commit this work and push it to the remote.
 
 
 <br />
@@ -363,7 +363,7 @@ If you follow this flow every time you're deploying new features, you'll save yo
 
 Use the [Standard Readme](https://github.com/RichardLitt/standard-readme) spec for guidance, and include plenty of meaningful info in your README like a link to the deployed production API (if you already created your production deploy in Heroku, the URL for the production app will be `https://NAME-OF-PRODUCTION-APP-HERE.herokuapp.com`)
 
-- [ ] Create and edit the README.md on a new branch named `docs/README` and push it up to the remote. Then pull that branch into `master`
+- [ ] Create and edit the README.md on a new branch named `docs/README` and push it up to the remote. Then merge that branch into `master`
 
 <br />
 
@@ -733,8 +733,6 @@ router.get('/', restricted, (req, res) => {
 - [ ] Write meaningful tests for both Login and Register endpoints that take into account any constraints of your DB (again, since we're using Postgres here watch out for those primary keys!)
 
 ## Adds Login and Register endpoints
-
-- [ ] Create a new branch called `feat/auth` and push it to your remote
 
 - [ ] In `auth/` create 3 files
 	- [ ] auth-helpers.js
