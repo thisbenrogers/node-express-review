@@ -672,7 +672,7 @@ function validateUser(user) {
 } 
 ```
 
-- [ ]Commit and push
+- [ ] Commit and push
 
 ## Restricts Users Route
 
