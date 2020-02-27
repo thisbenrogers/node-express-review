@@ -314,11 +314,19 @@ To explain the 3 different environments we'll be using:
 
 - [ ] Once logged into your Heroku dashboard, click on `New` in the top Right corner, and then on `Create new app`
 
+![Create New Heroku App][new]
+
+[new]: https://res.cloudinary.com/communitycalendar/image/upload/v1582771643/Screen_Shot_2020-02-26_at_8.38.42_PM_sznsls.png
+
 - [ ] Give your app a meaningful name, and be sure to use the word `staging` to differentiate it from the `production` app we'll build in a bit. Then click on `Create app`
 
-- [ ] Once your app is created, navigate to the `Deploy` tab and select `GitHub` as the Deployment Method.
+- [ ] Once your app is created, navigate to the `Deploy` tab (Heroku tends to drop you off here anyhow) and select `GitHub` as the Deployment Method.
 
 - [ ] Connect the app to your remote GitHub respoitory, and enable automatic deploys on `master` branch.
+
+![Connect Heroku to Github Remote][github]
+
+[github]: https://res.cloudinary.com/communitycalendar/image/upload/v1582771644/Screen_Shot_2020-02-26_at_8.42.27_PM_xwbexw.png
 
 Now, since our `master` branch currently only contains a .gitignore file, we'll need to merge our latest `middleware/logger` branch into `master` so Heroku will have something to deploy.
 
@@ -349,9 +357,13 @@ since we know there are no changes on the remote that we need to pull into our b
 
 Now in your Heroku Dashboard, you can click on the `Activity` tab and watch Heroku build the application.
 
+![Heroku Activiy Tab][activity]
+
+[activity]: https://res.cloudinary.com/communitycalendar/image/upload/v1582771643/Screen_Shot_2020-02-26_at_8.46.17_PM_fhxbsx.png
+
 - [ ] Once you see a `Build Succeeded` and a `Deployed` message in the `Activity ` tab, click on 'Open app' in the top right corner and hope for a rocket!
 
-- [ ] While you're in your Heroku dashboard, go ahead and create a new app for production following the above guidance. Connect it to the exact same repository just don't deploy it yet.
+- [ ] While you're in your Heroku dashboard, go ahead and create a new app for production following the above guidance. Connect it to the exact same repository's `master` branch just **DON'T deploy it yet!**
 
 <br />
 
