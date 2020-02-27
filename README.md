@@ -335,7 +335,7 @@ To explain the 3 different environments we'll be using:
 	- This is where we test and troubleshoot any deploy issues
 - **Production** is (in this context) the environment on Heroku that we _manually_ deploy from `master` once staging looks good
 	- This is where any client that needs our API accesses it (like a React app)
-	- We _only_ manually deploy this branch once the new features on our staging branch are working as we expect, so that we can be confident in our production server's stability.
+	- We _only_ manually deploy this app once the new features on our deployed staging server are working as we expect, so that we can be confident in our production server's stability.
 
 ---
 <br />
