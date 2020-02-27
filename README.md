@@ -316,7 +316,7 @@ To explain the 3 different environments we'll be using:
 
 ![Create New Heroku App][new]
 
-[new]: https://res.cloudinary.com/communitycalendar/image/upload/v1582771643/Screen_Shot_2020-02-26_at_8.38.42_PM_sznsls.png
+[new]: https://res.cloudinary.com/thisbenrogers/image/upload/v1582772590/Screen_Shot_2020-02-26_at_8.38.42_PM_ruzjml.png
 
 - [ ] Give your app a meaningful name, and be sure to use the word `staging` to differentiate it from the `production` app we'll build in a bit. Then click on `Create app`
 
@@ -326,7 +326,7 @@ To explain the 3 different environments we'll be using:
 
 ![Connect Heroku to Github Remote][github]
 
-[github]: https://res.cloudinary.com/communitycalendar/image/upload/v1582771644/Screen_Shot_2020-02-26_at_8.42.27_PM_xwbexw.png
+[github]: https://res.cloudinary.com/thisbenrogers/image/upload/v1582772590/Screen_Shot_2020-02-26_at_8.42.27_PM_ressp4.png
 
 Now, since our `master` branch currently only contains a .gitignore file, we'll need to merge our latest `middleware/logger` branch into `master` so Heroku will have something to deploy.
 
@@ -359,7 +359,7 @@ Now in your Heroku Dashboard, you can click on the `Activity` tab and watch Hero
 
 ![Heroku Activiy Tab][activity]
 
-[activity]: https://res.cloudinary.com/communitycalendar/image/upload/v1582771643/Screen_Shot_2020-02-26_at_8.46.17_PM_fhxbsx.png
+[activity]: https://res.cloudinary.com/thisbenrogers/image/upload/v1582772590/Screen_Shot_2020-02-26_at_8.46.17_PM_k4hbnn.png
 
 - [ ] Once you see a `Build Succeeded` and a `Deployed` message in the `Activity ` tab, click on 'Open app' in the top right corner and hope for a rocket!
 
@@ -915,13 +915,26 @@ We're ready to merge these new changes into master now, so let's first go to Her
 - [ ] First, navigate to the `Resources` tab.
 - [ ] Under `Add-ons` search for postgres and provision a new DB.
 
+![Provision new Postgres DB in Heroku][postgres]
+
+[postgres]: https://res.cloudinary.com/thisbenrogers/image/upload/v1582772590/Screen_Shot_2020-02-26_at_9.00.20_PM_fi26bu.png
+
 Once the Postgres DB is added, you'll be able to navigate to `Settings` in your Heroku staging application, and click on `Reveal Config Vars`. Here you'll notice that Heroku has added a `DATABASE_URL` for us. Cool! We'll need to add a few more Config Vars too while we're here.
+
+![Heroku Config Vars][config]
+
+[config]: https://res.cloudinary.com/thisbenrogers/image/upload/v1582772860/Screen_Shot_2020-02-26_at_9.07.00_PM_q1wp2g.png
 
 - [ ] Add a `DB_ENV` key with a value of `production`
 - [ ] Add a `JWT_SECRET` key with a secure value of your choosing.
 
 - [ ] Now, merge your most recent changes into `master`, and check your Heroku Activity feed for progress/errors
 - [ ] Once the application is deployed, we'll need to run our migrations. There are a few ways to do this, but for simplicity's sake here we'll use Heroku's Console that they provide under the `More` dropdown in the top right of your application dashboard. Choose `Run Console`
+
+![Access Heroku Console][console]
+
+[console]: https://res.cloudinary.com/thisbenrogers/image/upload/v1582772590/Screen_Shot_2020-02-26_at_9.01.18_PM_m84d1h.png
+
 - [ ] run `knex migrate:latest`, and once the batch has run,
 - [ ] Using Postman or Insomnia, register a new user at the URL of your deployed app (`/api/register`)
 - [ ] Using Postman or Insomnia, try to access `/api/users` with the token that is returned from `register` asn an `authorization` header
