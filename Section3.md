@@ -180,7 +180,7 @@ router.post('/', (req, res) => {
 module.exports = router;
 ```
 
-- [ ] Don't forget to incorporate your validation middleware from before into each `post`, both login and register routers need this validation.
+- [ ] Don't forget to incorporate your validation function from before into each `post`, both login and register routers need this validation.
 
 - [ ] Now go into your server and `.use` these new routes
 
