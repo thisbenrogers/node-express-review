@@ -250,7 +250,7 @@ Once the Postgres DB is added, you'll be able to navigate to `Settings` in your 
 
 - [ ] run `knex migrate:latest`, and once the batch has run,
 - [ ] Using Postman or Insomnia, register a new user at the URL of your deployed app (`/api/register`)
-- [ ] Using Postman or Insomnia, try to access `/api/users` with the token that is returned from `register` asn an `authorization` header
+- [ ] Using Postman or Insomnia, try to access `/api/users` with the token that is returned from `register` as an `authorization` header
 - [ ] Once this staging application is running as expected, go into your `production` application and:
 	- [ ] Provision a Postgres DB
 	- [ ] Add `DB_ENV` and `JWT_SECRET` Config Vars
