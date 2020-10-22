@@ -72,7 +72,7 @@ In your terminal:
 - [ ] `git add .gitignore`
 - [ ] `git commit -m "Initial Commit"`
 - [ ] `git remote add origin <remote_repo_rl>` (the url from your github remote)
-- [ ] `git push -u origin master`
+- [ ] `git push -u origin main`
 - [ ] `git checkout -b "initialize"`
 - [ ] `git push -u origin initialize`
 
@@ -331,9 +331,9 @@ To explain the 3 different environments we'll be using:
 
 - **Development** is the environment on our local machines
 	- This is where we write the code
-- **Staging** is (in this context) the environment on Heroku that _continuously_ deploys anything on `master`
+- **Staging** is (in this context) the environment on Heroku that _continuously_ deploys anything on `main`
 	- This is where we test and troubleshoot any deploy issues
-- **Production** is (in this context) the environment on Heroku that we _manually_ deploy from `master` once staging looks good
+- **Production** is (in this context) the environment on Heroku that we _manually_ deploy from `main` once staging looks good
 	- This is where any client that needs our API accesses it (like a React app)
 	- We _only_ manually deploy this app once the new features on our deployed staging server are working as we expect, so that we can be confident in our production server's stability.
 
@@ -352,36 +352,36 @@ To explain the 3 different environments we'll be using:
 
 - [ ] Once your app is created, navigate to the `Deploy` tab (Heroku tends to drop you off here anyhow) and select `GitHub` as the Deployment Method.
 
-- [ ] Connect the app to your remote GitHub respoitory, and enable automatic deploys on `master` branch.
+- [ ] Connect the app to your remote GitHub respoitory, and enable automatic deploys on `main` branch.
 
 ![Connect Heroku to Github Remote][github]
 
 [github]: https://res.cloudinary.com/thisbenrogers/image/upload/v1582772590/Screen_Shot_2020-02-26_at_8.42.27_PM_ressp4.png
 
-Now, since our `master` branch currently only contains a .gitignore file, we'll need to merge our latest `middleware/logger` branch into `master` so Heroku will have something to deploy.
+Now, since our `main` branch currently only contains a .gitignore file, we'll need to merge our latest `middleware/logger` branch into `main` so Heroku will have something to deploy.
 
 <br />
 
 In your terminal:
 
-- [ ] `git checkout master`
+- [ ] `git checkout main`
 
 since we know there are no changes on the remote that we need to pull into our branch first, we can:
 
 - [ ] `git merge middleware/logger`
-- [ ] `git push origin master`
+- [ ] `git push origin main`
 
 <br />
 
 > If there were remote changes that we needed to pull into our local branch first, we would need to instead run:
 > 
-> - `git checkout master`
-> - `git pull --rebase origin master`
+> - `git checkout main`
+> - `git pull --rebase origin main`
 > - `git checkout middleware/logger`
-> - `git pull --rebase origin master`
-> - `git checkout master`
+> - `git pull --rebase origin main`
+> - `git checkout main`
 > - `git merge middleware/logger`
-> - `git push origin master`
+> - `git push origin main`
 
 <br />
 
@@ -393,7 +393,7 @@ Now in your Heroku Dashboard, you can click on the `Activity` tab and watch Hero
 
 - [ ] Once you see a `Build Succeeded` and a `Deployed` message in the `Activity ` tab, click on 'Open app' in the top right corner and hope for a rocket!
 
-- [ ] While you're in your Heroku dashboard, go ahead and create a new app for production following the above guidance. Connect it to the exact same repository's `master` branch just **DON'T deploy it yet!**
+- [ ] While you're in your Heroku dashboard, go ahead and create a new app for production following the above guidance. Connect it to the exact same repository's `main` branch just **DON'T deploy it yet!**
 
 <br />
 
@@ -403,11 +403,11 @@ Now in your Heroku Dashboard, you can click on the `Activity` tab and watch Hero
 Now that we have a staging app deployed, it's time to create and update our README.md to reflect the changes we're about to take live on our production deployment. You'll want to follow this deployment flow to allow for the smoothest introduction of new features for anyone working on a client that would be consuming this API: 
 > deploy to staging > test/troubleshoot staging deploy > update docs > deploy to production
 
-If you follow this flow every time you're deploying new features, you'll save yourself the rush to explain everything you've changed. All the new features will be documented in the `master` README before the `production` deploy completes, so your team will remain informed about the current state of the deploy.
+If you follow this flow every time you're deploying new features, you'll save yourself the rush to explain everything you've changed. All the new features will be documented in the `main` README before the `production` deploy completes, so your team will remain informed about the current state of the deploy.
 
 Use the [Standard Readme](https://github.com/RichardLitt/standard-readme) spec for guidance, and include plenty of meaningful info in your README like a link to the deployed production API (if you already created your production deploy in Heroku, the URL for the production app will be `https://NAME-OF-PRODUCTION-APP-HERE.herokuapp.com`)
 
-- [ ] Create and edit the README.md on a new branch named `docs/README` and push it up to the remote. Then merge that branch into `master`
+- [ ] Create and edit the README.md on a new branch named `docs/README` and push it up to the remote. Then merge that branch into `main`
 
 <br />
 
@@ -415,9 +415,9 @@ Use the [Standard Readme](https://github.com/RichardLitt/standard-readme) spec f
 
 Now that we've updated our docs and been through any troubleshooting on the staging app, we can deploy to production.
 
-- [ ] In your Heroku Dashboard, navigate to the Production app (**not** staging) that we created earlier, and go to the `Deploy` tab. Make sure that automatic deploys are turned off, then manually deploy the `master` branch.
+- [ ] In your Heroku Dashboard, navigate to the Production app (**not** staging) that we created earlier, and go to the `Deploy` tab. Make sure that automatic deploys are turned off, then manually deploy the `main` branch.
 
-Your staging app is continuously deploying from `master` because we want our newest edits to be live for us to test asap, but we manually deploy production so that we can be sure everything is working correctly before we take our new edits live.
+Your staging app is continuously deploying from `main` because we want our newest edits to be live for us to test asap, but we manually deploy production so that we can be sure everything is working correctly before we take our new edits live.
 
 - [ ] Once your production app is deployed, test it out like you did for staging (hopefully rocket!) and pat yourself on the back.
 

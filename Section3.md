@@ -223,7 +223,7 @@ module.exports = server;
 
 ## Deploys
 
-We're ready to merge these new changes into master now, so let's first go to Heroku and get our staging application ready.
+We're ready to merge these new changes into main now, so let's first go to Heroku and get our staging application ready.
 
 - [ ] First, navigate to the `Resources` tab.
 - [ ] Under `Add-ons` search for postgres and provision a new DB.
@@ -241,7 +241,7 @@ Once the Postgres DB is added, you'll be able to navigate to `Settings` in your 
 - [ ] Add a `DB_ENV` key with a value of `production`
 - [ ] Add a `JWT_SECRET` key with a secure value of your choosing.
 
-- [ ] Now, merge your most recent changes into `master`, and check your Heroku Activity feed for progress/errors
+- [ ] Now, merge your most recent changes into `main`, and check your Heroku Activity feed for progress/errors
 - [ ] Once the application is deployed, we'll need to run our migrations. There are a few ways to do this, but for simplicity's sake here we'll use Heroku's Console that they provide under the `More` dropdown in the top right of your application dashboard. Choose `Run Console`
 
 ![Access Heroku Console][console]
@@ -254,6 +254,6 @@ Once the Postgres DB is added, you'll be able to navigate to `Settings` in your 
 - [ ] Once this staging application is running as expected, go into your `production` application and:
 	- [ ] Provision a Postgres DB
 	- [ ] Add `DB_ENV` and `JWT_SECRET` Config Vars
-	- [ ] Manually deploy from `master`
+	- [ ] Manually deploy from `main`
 	- [ ] Run your migrations
 	- [ ] Test out production
