@@ -3,8 +3,6 @@
 
 ## Restricts Users Route
 
-- [ ] Checkout a new branch named `feat/auth` and push it to remote.
-
 Now we're going to prepare a function to check for and verify a JSON web token.
 
 - [ ] In the root directory, add another directory named `auth`
@@ -217,7 +215,7 @@ module.exports = server;
 
 ## Updates documentation
 
-- [ ] On a new branch, make sure that each of your `/api/...` endpoints are documented well, including any body data they require, filtering they may offer, validation included, and what data each endpoint returns. Document this clearly and concisely, so that it is very easy to browse. 
+- [ ] Make sure that each of your `/api/...` endpoints are documented well, including any body data they require, filtering they may offer, validation included, and what data each endpoint returns. Document this clearly and concisely, so that it is very easy to browse. 
 
 - [ ] Commit and push these changes
 

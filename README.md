@@ -73,10 +73,10 @@ In your terminal:
 - [ ] `git commit -m "Initial Commit"`
 - [ ] `git remote add origin <remote_repo_rl>` (the url from your github remote)
 - [ ] `git push -u origin main`
-- [ ] `git checkout -b "initialize"`
-- [ ] `git push -u origin initialize`
+- [ ] `git checkout -b "deploy"`
+- [ ] `git push -u origin deploy`
 
-Now you have a remote repo connected to your local repo, and you're currently developing on a newly published branch called _initialize_.
+Now you have a remote repo connected to your local repo, and you're currently developing on a newly published branch called _deploy_.
 
 
 <br />
@@ -137,10 +137,6 @@ In your terminal:
 
 ## Writes test for Server endpoint
 
-Start a new branch called `tests/server-endpoint`:
-
-- [ ] `git checkout -b "tests/server-endpoint"`
-- [ ] `git push -u origin tests/server-endpoint`
 
 Add the following files to the root directory, and don't forget the `API` directory:
 
@@ -235,8 +231,6 @@ in your terminal:
 
 ## Adds server endpoint
 
-- [ ] Create a new branch called `feat/server-endpoint` and push it up to the remote.
-
 - [ ] Let's finish building out our basic server endpoint so that test can pass:
 
 _API/server.js_
@@ -271,8 +265,6 @@ Then, in your terminal:
 ## Adds Logger middleware
 
 Adding a logger middleware early is a good idea, so let's do that now.
-
-- [ ] Make a new branch called `middleware/logger` and push it up to the remote.
 
 - [ ] In your root directory, add a new directory called `middleware`
 - [ ] Create a file called `logger.js` inside of `middleware`
@@ -358,7 +350,7 @@ To explain the 3 different environments we'll be using:
 
 [github]: https://res.cloudinary.com/thisbenrogers/image/upload/v1582772590/Screen_Shot_2020-02-26_at_8.42.27_PM_ressp4.png
 
-Now, since our `main` branch currently only contains a .gitignore file, we'll need to merge our latest `middleware/logger` branch into `main` so Heroku will have something to deploy.
+Now, since our `main` branch currently only contains a .gitignore file, we'll need to merge our `deploy` branch into `main` so Heroku will have something to deploy.
 
 <br />
 
@@ -368,7 +360,7 @@ In your terminal:
 
 since we know there are no changes on the remote that we need to pull into our branch first, we can:
 
-- [ ] `git merge middleware/logger`
+- [ ] `git merge deploy`
 - [ ] `git push origin main`
 
 <br />
@@ -377,10 +369,10 @@ since we know there are no changes on the remote that we need to pull into our b
 > 
 > - `git checkout main`
 > - `git pull --rebase origin main`
-> - `git checkout middleware/logger`
+> - `git checkout deploy`
 > - `git pull --rebase origin main`
 > - `git checkout main`
-> - `git merge middleware/logger`
+> - `git merge deploy`
 > - `git push origin main`
 
 <br />
@@ -407,8 +399,7 @@ If you follow this flow every time you're deploying new features, you'll save yo
 
 Use the [Standard Readme](https://github.com/RichardLitt/standard-readme) spec for guidance, and include plenty of meaningful info in your README like a link to the deployed production API (if you already created your production deploy in Heroku, the URL for the production app will be `https://NAME-OF-PRODUCTION-APP-HERE.herokuapp.com`)
 
-- [ ] Create and edit the README.md on a new branch named `docs/README` and push it up to the remote. Then merge that branch into `main`
-
+- [ ] Create and edit the README.md and push it up to the remote.
 <br />
 
 ## Deploys application to Heroku production

@@ -8,7 +8,7 @@
 
 Back in your terminal (in the root folder of this project)
 
-- [ ] Checkout a new branch called `config/knex` and push it to the remote
+- [ ] Checkout a new branch called `routes` and push it to the remote
 - [ ] `npx knex init`
 
 This creates a new knexfile.js at the root of our project. Edit it to look similar to this:
@@ -121,7 +121,6 @@ module.exports = knex(knexConfig[environment]);
 
 ## Adds Users Route
 
-- [ ] Create a new branch called `feat/users-route` and publish it to the remote
 
 Now we'll build out the model, router, and basic validation for accessing the `Users` resource, so we can use it when registering or logging in.
 
